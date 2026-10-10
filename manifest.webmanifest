@@ -1,0 +1,14 @@
+{
+  "name": "TannProduct — Creator Asset Store",
+  "short_name": "TannProduct",
+  "description": "Premium Roblox creator asset store.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0b13",
+  "theme_color": "#0b0b13",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

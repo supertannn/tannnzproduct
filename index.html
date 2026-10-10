@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b13">
+  <meta name="description" content="TannProduct — marketplace premium untuk Roblox creator assets, model, UI, tools, dan sistem siap pakai.">
+  <title>TannProduct — Creator Asset Store</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="TannProduct beranda">
+      <span class="brand-mark"><span>T</span></span>
+      <span class="brand-word">Tann<span>Product</span><small>CREATOR MARKET</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a class="nav-link active" href="#store">Discover</a>
+      <button class="nav-link" data-filter-shortcut="free">Free assets</button>
+      <button class="nav-link" data-filter-shortcut="paid">Premium</button>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button install-button" id="installButton" hidden aria-label="Pasang aplikasi" title="Pasang aplikasi">↓</button>
+      <button class="owner-button" id="ownerButton"><span class="owner-dot"></span><span id="ownerButtonLabel">Tambah Produk</span><span class="arrow">↗</span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-spark">✦</span> THE CREATOR'S ASSET LIBRARY <span class="eyebrow-line"></span></div>
+        <h1>Build something<br><span>remarkable.</span></h1>
+        <p class="hero-description">Aset Roblox pilihan untuk ide yang lebih besar. Temukan model, UI, tools, dan resource siap pakai — dikurasi untuk creator yang serius berkarya.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#store">Jelajahi koleksi <span>↘</span></a>
+          <button class="button button-quiet" id="heroSearchButton"><span class="search-mini">⌕</span> Temukan aset</button>
+        </div>
+        <div class="hero-proof"><div class="proof-avatars"><i>T</i><i>+</i><i>✦</i></div><span><strong id="proofCount">3</strong> starter assets</span><span class="proof-divider"></span><span class="proof-free">Free &amp; premium</span></div>
+      </div>
+      <div class="hero-art" aria-label="Ilustrasi aset kreator">
+        <div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div><div class="art-glow"></div>
+        <div class="art-main-card">
+          <div class="art-card-top"><span class="art-tag"><i></i> CREATOR PICK</span><span class="art-menu">•••</span></div>
+          <div class="art-object object-platform"><div class="platform-top"></div><div class="platform-side"></div><div class="platform-light"></div></div>
+          <div class="art-card-bottom"><div><strong>Neon Platform Kit</strong><span>ROBLOX MODEL · RBXMX</span></div><span class="art-card-symbol">✧</span></div>
+        </div>
+        <div class="float-chip chip-top"><span class="chip-icon violet">◈</span><span><b>Ready to build</b><small>Creator resources</small></span><span class="chip-check">✓</span></div>
+        <div class="float-chip chip-bottom"><span class="chip-icon blue">↧</span><span><b>Instant access</b><small>Download your asset</small></span></div>
+        <div class="art-caption">DESIGNED FOR YOUR NEXT BIG IDEA <span>✳</span></div>
+      </div>
+    </section>
+
+    <section class="benefit-strip shell" aria-label="Keunggulan TannProduct">
+      <div class="benefit-item"><span class="benefit-icon">◇</span><div><strong>Creator-first</strong><small>Aset ringkas, ide tanpa batas</small></div></div>
+      <div class="benefit-item"><span class="benefit-icon">↧</span><div><strong>Direct download</strong><small>Akses file dengan mudah</small></div></div>
+      <div class="benefit-item"><span class="benefit-icon">⌘</span><div><strong>Roblox-ready</strong><small>Format RBXM / RBXMX</small></div></div>
+      <div class="benefit-item"><span class="benefit-icon">✦</span><div><strong>Curated collection</strong><small>Temukan resource pilihan</small></div></div>
+    </section>
+
+    <section class="store-section shell" id="store">
+      <div class="section-heading">
+        <div><div class="section-kicker">THE LIBRARY</div><h2>Explore the collection<span class="heading-period">.</span></h2><p>Resource yang tepat membuat proses kreatif terasa lebih ringan.</p></div>
+        <div class="catalog-stats"><span class="stat-large" id="productCount">03</span><span class="stat-label">PRODUCTS<br>IN THE STORE</span></div>
+      </div>
+      <div class="store-toolbar">
+        <label class="search-box" for="searchInput"><span class="search-glass">⌕</span><input id="searchInput" type="search" placeholder="Cari nama, kategori, atau keyword..." autocomplete="off"><kbd>⌘ K</kbd></label>
+        <div class="toolbar-right"><div class="filter-pills" role="group" aria-label="Filter produk"><button class="filter-pill active" data-filter="all">Semua</button><button class="filter-pill" data-filter="free">Gratis</button><button class="filter-pill" data-filter="paid">Premium</button><button class="filter-pill" data-filter="saved">Disimpan <span class="saved-count" id="savedCount">0</span></button></div><label class="sort-select"><span>Sort:</span><select id="sortSelect" aria-label="Urutkan produk"><option value="latest">Terbaru</option><option value="name">Nama A–Z</option><option value="price-low">Harga terendah</option><option value="price-high">Harga tertinggi</option></select></label></div>
+      </div>
+      <div class="catalog-meta"><span id="resultSummary">Memuat koleksi...</span><span class="catalog-meta-right"><span class="live-dot"></span> CATALOG LIVE</span></div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><div class="empty-symbol">⌕</div><h3>Belum ada produk di sini</h3><p>Coba kata kunci lain atau pilih filter yang berbeda.</p><button class="button button-quiet" id="resetFilters">Reset filter</button></div>
+      <div class="catalog-footnote"><span class="footnote-icon">✳</span><span>Made for creators, by creators.</span><span class="footnote-rule"></span><span class="footnote-muted">TannProduct · Curated digital goods</span></div>
+    </section>
+
+    <section class="creator-banner shell">
+      <div class="banner-art"><div class="banner-diamond"></div><div class="banner-star">✦</div><div class="banner-orbit"></div></div>
+      <div class="banner-copy"><div class="section-kicker">FOR THE NEXT GENERATION</div><h2>One asset can change<br>your entire workflow.</h2><p>Mulai dari komponen kecil sampai ide yang lebih kompleks. Bangun lebih cepat dengan resource yang tepat.</p></div>
+      <a class="button button-light" href="#store">Temukan inspirasimu <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer shell"><a class="brand footer-brand" href="#top"><span class="brand-mark"><span>T</span></span><span class="brand-word">Tann<span>Product</span><small>CREATOR MARKET</small></span></a><span class="footer-copy">© <span id="yearNow">2026</span> TannProduct. Built for creators.</span><div class="footer-links"><a href="#store">Explore</a><button id="footerOwnerButton">Tambah Produk</button></div></footer>
+
+  <div class="modal-backdrop" id="folderGuideModal" hidden>
+    <section class="modal modal-auth folder-guide-modal" role="dialog" aria-modal="true" aria-labelledby="folderGuideTitle">
+      <button class="modal-close" data-close-modal="folderGuideModal" aria-label="Tutup">×</button>
+      <div class="modal-mark">T<span>✦</span></div>
+      <div class="section-kicker">PUBLISH FROM YOUR FOLDER</div>
+      <h2 id="folderGuideTitle">Tambah produk tanpa token</h2>
+      <p class="modal-lead">TannProduct sekarang memakai folder statis. Tidak ada token, login, backend, Node.js, atau Supabase. File di folder publik akan bisa diunduh semua orang.</p>
+      <div class="folder-steps">
+        <div class="folder-step"><span>01</span><div><b>Letakkan file</b><p>Salin file <code>.rbxm</code> atau <code>.rbxmx</code> ke folder <code>products/</code> di project, lalu commit/push ke GitHub.</p></div></div>
+        <div class="folder-step"><span>02</span><div><b>Daftarkan produk</b><p>Tambahkan satu objek produk di array <code>products.json</code> pada root project. Nama file di <code>filePath</code> dan <code>downloadUrl</code> harus sama persis.</p></div></div>
+        <div class="folder-step"><span>03</span><div><b>Deploy otomatis</b><p>Vercel akan deploy ulang setelah perubahan masuk ke branch yang terhubung. Produk baru muncul di katalog setelah deploy selesai.</p></div></div>
+      </div>
+      <div class="folder-code-heading"><b>Template untuk produk gratis</b><button class="text-button" type="button" id="copyTemplateButton">Salin JSON ↗</button></div>
+      <pre class="product-json-example"><code id="productJsonTemplate">{
+  "id": "my-new-model",
+  "name": "Nama Produk",
+  "description": "Deskripsi singkat produk.",
+  "category": "Roblox Model",
+  "type": "free",
+  "price": 0,
+  "version": "1.0.0",
+  "format": "RBXMX",
+  "filePath": "products/nama-file.rbxmx",
+  "downloadUrl": "/products/nama-file.rbxmx",
+  "purchaseUrl": "",
+  "date": "2026-10-10",
+  "accent": "violet"
+}</code></pre>
+      <p class="folder-note"><b>Penting:</b> situs statis tidak bisa mendeteksi file baru di folder secara otomatis. Setiap file baru harus didaftarkan di <code>products.json</code>. Jangan taruh file premium di folder <code>products/</code> publik; gunakan tautan pembelian eksternal.</p>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="detailModal" hidden><section class="modal modal-detail" role="dialog" aria-modal="true" aria-labelledby="detailTitle"><button class="modal-close" data-close-modal="detailModal" aria-label="Tutup">×</button><div id="detailContent"></div></section></div>
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  <script src="./config.js"></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>

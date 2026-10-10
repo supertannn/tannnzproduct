@@ -1,0 +1,44 @@
+[
+  {
+    "id": "starter-neon-platform",
+    "name": "Neon Platform Kit",
+    "description": "Model platform futuristik sederhana untuk lobby, showcase, atau area spawn. Termasuk beberapa Part yang dapat kamu ubah warna dan ukurannya di Roblox Studio.",
+    "category": "Environment",
+    "type": "free",
+    "price": 0,
+    "version": "1.0.0",
+    "format": "RBXMX",
+    "filePath": "products/neon-platform.rbxmx",
+    "downloadUrl": "/products/neon-platform.rbxmx",
+    "date": "2026-10-10",
+    "accent": "violet"
+  },
+  {
+    "id": "starter-spawn-beacon",
+    "name": "Spawn Beacon",
+    "description": "Beacon dekoratif sebagai titik fokus area spawn atau lobby. Dibuat dari komponen dasar sehingga mudah dikustomisasi tanpa asset eksternal.",
+    "category": "Roblox Model",
+    "type": "free",
+    "price": 0,
+    "version": "1.0.0",
+    "format": "RBXMX",
+    "filePath": "products/spawn-beacon.rbxmx",
+    "downloadUrl": "/products/spawn-beacon.rbxmx",
+    "date": "2026-10-10",
+    "accent": "blue"
+  },
+  {
+    "id": "starter-crystal-decor",
+    "name": "Crystal Decor Set",
+    "description": "Set dekorasi kristal low-complexity untuk area fantasy, magic, atau event. Atur Material, warna, dan skala sesuai gaya game kamu.",
+    "category": "Environment",
+    "type": "free",
+    "price": 0,
+    "version": "1.0.0",
+    "format": "RBXMX",
+    "filePath": "products/crystal-decor.rbxmx",
+    "downloadUrl": "/products/crystal-decor.rbxmx",
+    "date": "2026-10-10",
+    "accent": "crystal"
+  }
+]
